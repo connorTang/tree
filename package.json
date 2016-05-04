@@ -1,5 +1,5 @@
 {
-  "name": "rc-tree",
+  "name": "sevone-react-tree",
   "version": "1.3.0",
   "description": "tree ui component for react",
   "keywords": [
@@ -8,19 +8,19 @@
     "react-tree",
     "tree"
   ],
-  "main": "lib/index",
+  "main": "src/index",
   "files": [
     "assets/*.css",
-    "lib"
+    "src"
   ],
-  "homepage": "http://github.com/react-component/tree",
-  "author": "hualei5280@gmail.com",
+  "homepage": "http://github.com/connorTang/tree",
+  "author": "ctang.ps4@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-component/tree.git"
+    "url": "git@github.com:connorTang/tree.git"
   },
   "bugs": {
-    "url": "http://github.com/react-component/tree/issues"
+    "url": "http://github.com/connorTang/tree/issues"
   },
   "licenses": "MIT",
   "config": {
