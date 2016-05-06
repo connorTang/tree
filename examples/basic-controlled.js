@@ -1,37 +1,38 @@
-webpackJsonp([2],{
-
-/***/ 0:
+webpackJsonp([2,8],[
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(179);
+	module.exports = __webpack_require__(4);
 
 
 /***/ },
-
-/***/ 179:
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"rc-tree/assets/index.less\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	__webpack_require__(2);
-	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"react\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(160);
+	var _reactDom = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"react-dom\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _rcTree = __webpack_require__(161);
+	var _rcTree = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"rc-tree\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _rcTree2 = _interopRequireDefault(_rcTree);
 	
-	var _util = __webpack_require__(180);
+	var _util = __webpack_require__(5);
 	
-	var Demo = _react2['default'].createClass({
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var Demo = _react2["default"].createClass({
 	  displayName: 'Demo',
 	
 	  propTypes: {
@@ -101,27 +102,27 @@ webpackJsonp([2],{
 	    var loop = function loop(data) {
 	      return data.map(function (item) {
 	        if (item.children) {
-	          return _react2['default'].createElement(
+	          return _react2["default"].createElement(
 	            _rcTree.TreeNode,
 	            { key: item.key, title: item.title,
 	              disableCheckbox: item.key === '0-0-0-key' ? true : false },
 	            loop(item.children)
 	          );
 	        }
-	        return _react2['default'].createElement(_rcTree.TreeNode, { key: item.key, title: item.title });
+	        return _react2["default"].createElement(_rcTree.TreeNode, { key: item.key, title: item.title });
 	      });
 	    };
 	    // console.log(getRadioSelectKeys(gData, this.state.selectedKeys));
-	    return _react2['default'].createElement(
+	    return _react2["default"].createElement(
 	      'div',
 	      { style: { padding: '0 20px' } },
-	      _react2['default'].createElement(
+	      _react2["default"].createElement(
 	        'h2',
 	        null,
 	        'controlled'
 	      ),
-	      _react2['default'].createElement(
-	        _rcTree2['default'],
+	      _react2["default"].createElement(
+	        _rcTree2["default"],
 	        { checkable: true, multiple: this.props.multiple,
 	          onExpand: this.onExpand, expandedKeys: this.state.expandedKeys,
 	          autoExpandParent: this.state.autoExpandParent,
@@ -129,13 +130,13 @@ webpackJsonp([2],{
 	          onSelect: this.onSelect, selectedKeys: this.state.selectedKeys },
 	        loop(_util.gData)
 	      ),
-	      _react2['default'].createElement(
+	      _react2["default"].createElement(
 	        'h2',
 	        null,
 	        'checkStrictly'
 	      ),
-	      _react2['default'].createElement(
-	        _rcTree2['default'],
+	      _react2["default"].createElement(
+	        _rcTree2["default"],
 	        { checkable: true, multiple: this.props.multiple, defaultExpandAll: true,
 	          onExpand: this.onExpand, expandedKeys: this.state.expandedKeys,
 	          onCheck: this.onCheckStrictly,
@@ -143,13 +144,13 @@ webpackJsonp([2],{
 	          checkStrictly: true },
 	        loop(_util.gData)
 	      ),
-	      _react2['default'].createElement(
+	      _react2["default"].createElement(
 	        'h2',
 	        null,
 	        'radio\'s behavior select (in the same level)'
 	      ),
-	      _react2['default'].createElement(
-	        _rcTree2['default'],
+	      _react2["default"].createElement(
+	        _rcTree2["default"],
 	        { multiple: true, defaultExpandAll: true,
 	          onSelect: this.onRbSelect,
 	          selectedKeys: (0, _util.getRadioSelectKeys)(_util.gData, this.state.selectedKeys) },
@@ -159,19 +160,15 @@ webpackJsonp([2],{
 	  }
 	});
 	
-	_reactDom2['default'].render(_react2['default'].createElement(Demo, null), document.getElementById('__react-content'));
-	/* filterParentPosition, getFilterExpandedKeys,*/
+	_reactDom2["default"].render(_react2["default"].createElement(Demo, null), document.getElementById('__react-content'));
 
 /***/ },
-
-/***/ 180:
+/* 5 */
 /***/ function(module, exports) {
 
-	/* eslint no-loop-func: 0*/
-	
 	'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.generateData = generateData;
@@ -180,6 +177,7 @@ webpackJsonp([2],{
 	exports.filterParentPosition = filterParentPosition;
 	exports.getFilterExpandedKeys = getFilterExpandedKeys;
 	exports.getRadioSelectKeys = getRadioSelectKeys;
+	/* eslint no-loop-func: 0*/
 	
 	function generateData() {
 	  var x = arguments.length <= 0 || arguments[0] === undefined ? 3 : arguments[0];
@@ -212,7 +210,6 @@ webpackJsonp([2],{
 	  _loop(z);
 	  return gData;
 	}
-	
 	function calcTotal() {
 	  var x = arguments.length <= 0 || arguments[0] === undefined ? 3 : arguments[0];
 	  var y = arguments.length <= 1 || arguments[1] === undefined ? 2 : arguments[1];
@@ -224,24 +221,19 @@ webpackJsonp([2],{
 	  };
 	  return rec(z + 1);
 	}
-	
 	console.log('总节点数（单个tree）：', calcTotal());
 	// 性能测试：总节点数超过 2000（z要小）明显感觉慢。z 变大时，递归多，会卡死。
 	
-	var gData = generateData();
-	
-	exports.gData = gData;
+	var gData = exports.gData = generateData();
 	
 	function isInclude(smallArray, bigArray) {
 	  return smallArray.every(function (ii, i) {
 	    return ii === bigArray[i];
 	  });
 	}
-	
 	// console.log(isInclude(['0', '1'], ['0', '10', '1']));
 	
 	// arr.length === 628, use time: ~20ms
-	
 	function filterParentPosition(arr) {
 	  var levelObj = {};
 	  arr.forEach(function (item) {
@@ -253,10 +245,10 @@ webpackJsonp([2],{
 	  });
 	  var levelArr = Object.keys(levelObj).sort();
 	
-	  var _loop2 = function (i) {
+	  var _loop2 = function _loop2(i) {
 	    if (levelArr[i + 1]) {
 	      levelObj[levelArr[i]].forEach(function (ii) {
-	        var _loop3 = function (j) {
+	        var _loop3 = function _loop3(j) {
 	          levelObj[levelArr[j]].forEach(function (_i, index) {
 	            if (isInclude(ii.split('-'), _i.split('-'))) {
 	              levelObj[levelArr[j]][index] = null;
@@ -283,7 +275,6 @@ webpackJsonp([2],{
 	  });
 	  return nArr;
 	}
-	
 	// console.log(filterParentPosition(['0-2', '0-3-3', '0-10', '0-10-0', '0-0-1', '0-0', '0-1-1', '0-1']));
 	
 	function loopData(data, callback) {
@@ -378,6 +369,5 @@ webpackJsonp([2],{
 	}
 
 /***/ }
-
-});
+]);
 //# sourceMappingURL=basic-controlled.js.map
